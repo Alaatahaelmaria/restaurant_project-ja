@@ -1,0 +1,122 @@
+/* General Reset and Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f8f8;
+}
+
+/* Shared Form Styles */
+.form-container,
+.form-box {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+h1, h2, h3 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 14px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.error {
+  color: #ff4d4d;
+  margin-top: 10px;
+}
+
+.switch-link {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+/* Layout for login and register pages */
+.overlay {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://images.unsplash.com/photo-1551218808-94e220e084d2');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Layout for search page */
+.split-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.form-panel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.image-panel {
+  flex: 1;
+  background: url('https://images.unsplash.com/photo-1506368249639-73a05d6f6488') center center / cover no-repeat;
+}
+
+/* Search results */
+ul {
+  text-align: left;
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 15px;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search Restaurants</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="split-container">
+    <div class="form-panel">
+      <div class="form-box">
+        <h2>Search Restaurants</h2>
+        <form method="POST" action="/search">
+          <input type="text" name="name" placeholder="Restaurant Name">
+          <input type="text" name="street" placeholder="Street">
+          <input type="text" name="borough" placeholder="Borough">
+          <input type="text" name="cuisine" placeholder="Cuisine">
+          <input type="text" name="grade" placeholder="Grade">
+          <button type="submit">Search</button>
+        </form>
+
+        {% if results %}
+        <h3>Results</h3>
+        <ul>
+          {% for result in results %}
+          <li>
+            <strong>{{ result.name }}</strong><br>
+            {{ result.street }}, {{ result.borough }}<br>
+            {{ result.cuisine }} • Grade: {{ result.grade }}
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+
+        <p><a href="/">← Back to Login</a></p>
+      </div>
+    </div>
+    <div class="image-panel">
+      <!-- The image is added via CSS background -->
+    </div>
+  </div>
+</body>
+</html>
